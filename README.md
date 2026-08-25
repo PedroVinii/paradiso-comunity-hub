@@ -1,14 +1,24 @@
-# Welcome to your Lovable project
+# Paradiso Community Hub
+
+ME FAZ UMA LANDING PAGE QUE FALA SOBRE A COMUNIDADE DE UM PROJETO QUE TEMOS AQUI
+
+COM UM BOTÃO PARA ENTRAR NA COMUNIDADE NO WHATSAPP
+
+PROJETO: Residencial Paradiso Itaquera
+
+usa essa página como exemplo, mas não faça as mesmas copys
+
+nessa comunidade no whatsapp a gente manda infromações sobre o projeto, promoções, etc
 
 This project was built with [Lovable](https://lovable.dev).
 
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/a5ac02f9-bea4-45a5-9b81-21d8b6f23769).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +30,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
