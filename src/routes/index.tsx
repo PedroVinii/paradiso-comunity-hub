@@ -10,6 +10,9 @@ import {
   Lock,
   Flame,
   HelpCircle,
+  Briefcase,
+  TrendingUp,
+  Handshake,
 } from "lucide-react";
 import {
   Accordion,
@@ -17,11 +20,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import heroImg from "@/assets/paradiso-hero.jpg";
+import heroImg from "@/assets/paradiso-fachada.png.asset.json";
 
-const TITLE = "Residencial Paradiso Itaquera | Comunidade Oficial no WhatsApp";
+const TITLE =
+  "Comunidade Paradiso Itaquera para Corretores e Imobiliárias | Aprova Casa";
 const DESCRIPTION =
-  "Entre na comunidade do Residencial Paradiso Itaquera e receba plantas, condições especiais, andamento da obra e promoções em primeira mão.";
+  "Entre na comunidade exclusiva do Residencial Paradiso Itaquera, organizada pela Aprova Casa. Receba material de vendas, condições comissionadas, plantas e liberação de unidades em primeira mão.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -37,7 +41,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const WHATSAPP_URL = "https://chat.whatsapp.com/";
+const WHATSAPP_URL = "https://chat.whatsapp.com/FPdq5qG64vx9lF6PY1QHdy";
 
 function CtaButton({ label }: { label: string }) {
   return (
@@ -53,7 +57,7 @@ function CtaButton({ label }: { label: string }) {
       </a>
       <p className="flex items-center gap-2 text-xs text-muted-foreground">
         <Lock className="size-3.5" />
-        Entrada gratuita — sem corretor insistente, você decide quando falar
+        Acesso restrito a corretores e imobiliárias parceiras
       </p>
     </div>
   );
@@ -62,56 +66,56 @@ function CtaButton({ label }: { label: string }) {
 const benefits = [
   {
     icon: Building2,
-    title: "Tudo sobre o empreendimento",
-    text: "Plantas, metragens, torres, áreas de lazer e memorial descritivo direto da fonte.",
+    title: "Material oficial do empreendimento",
+    text: "Plantas, memorial descritivo, tabela de preços e fotos da obra liberadas para você vender com segurança.",
   },
   {
     icon: Tag,
-    title: "Condições e promoções",
-    text: "Descontos por tempo limitado, unidades em oferta e campanhas antes de virarem públicas.",
+    title: "Condições e comissões exclusivas",
+    text: "Campanhas, descontos e condições especiais para corretores e imobiliárias parceiras da Aprova Casa.",
   },
   {
     icon: Camera,
     title: "Obra em tempo real",
-    text: "Fotos e vídeos do canteiro todo mês para você acompanhar a evolução do Paradiso.",
+    text: "Fotos, vídeos e atualizações mensais do canteiro para você mostrar evolução ao cliente.",
   },
   {
     icon: MapPin,
-    title: "Feito para Itaquera",
-    text: "Mobilidade, comércio, metrô e valorização da região analisados sem enrolação.",
+    title: "Venda Itaquera com argumento",
+    text: "Dados de mobilidade, comércio, metrô e valorização da região para fortalecer sua apresentação.",
   },
   {
     icon: BellRing,
-    title: "Aviso de unidades liberadas",
-    text: "Novas fases e apartamentos liberados avisados na hora, antes do lançamento oficial.",
+    title: "Liberação antecipada de unidades",
+    text: "Seja avisado assim que novas fases e apartamentos forem liberados, antes do anúncio público.",
   },
   {
-    icon: Users,
-    title: "Dúvidas respondidas",
-    text: "Financiamento, subsídio, entrada parcelada e documentação explicados de forma simples.",
+    icon: Handshake,
+    title: "Suporte da equipe Aprova Casa",
+    text: "Tire dúvidas sobre financiamento, subsídio, documentação e acompanhe seus clientes com respaldo.",
   },
 ];
 
 const faq = [
   {
-    q: "Preciso pagar algo para entrar na comunidade?",
-    a: "Não. A comunidade é totalmente gratuita e serve para manter você informado sobre o Residencial Paradiso Itaquera.",
+    q: "Quem pode entrar na comunidade?",
+    a: "A comunidade é exclusiva para corretores autônomos e imobiliárias parceiras da Aprova Casa que atuam na venda do Residencial Paradiso Itaquera.",
   },
   {
-    q: "Vou receber mensagens o dia inteiro?",
-    a: "Não. Só a equipe publica, com poucos avisos por semana: novidades da obra, condições especiais e unidades liberadas.",
+    q: "Preciso pagar alguma taxa de adesão?",
+    a: "Não. O acesso à comunidade e ao material de vendas é gratuito para parceiros cadastrados.",
   },
   {
-    q: "Meu número fica visível para outras pessoas?",
-    a: "Não. Na comunidade do WhatsApp apenas os administradores enviam mensagens e seu contato não é exposto aos demais participantes.",
+    q: "Vou receber spam ou mensagens o dia todo?",
+    a: "Não. A comunicação é feita apenas pela equipe da Aprova Casa, com poucos avisos por semana e sempre relevantes para a venda.",
   },
   {
-    q: "Consigo tirar dúvidas sobre financiamento?",
-    a: "Sim. Você pode falar em particular com a equipe para simular parcelas, entrada e possibilidade de subsídio.",
+    q: "Meus clientes ficam expostos no grupo?",
+    a: "Não. A comunidade reúne apenas corretores e imobiliárias. Seus clientes são condugidos em atendimento particular.",
   },
   {
-    q: "Posso sair quando quiser?",
-    a: "Claro. Basta sair do grupo pelo próprio WhatsApp, sem precisar avisar ninguém.",
+    q: "Como acesso as tabelas e o material de divulgação?",
+    a: "Assim que entrar, você recebe orientações para acessar os materiais mais recentes e acompanhar novas liberações.",
   },
 ];
 
@@ -121,30 +125,30 @@ function Index() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <img
-          src={heroImg}
-          alt="Torres do Residencial Paradiso Itaquera iluminadas ao entardecer"
-          width={1600}
-          height={1008}
-          className="absolute inset-0 size-full object-cover opacity-30"
+          src={heroImg.url}
+          alt="Fachada do Residencial Paradiso Itaquera"
+          width={900}
+          height={1200}
+          className="absolute inset-0 size-full object-cover opacity-25"
         />
         <div className="bg-glow absolute inset-0" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/85 to-background" />
         <div className="relative mx-auto flex max-w-3xl flex-col items-center px-5 py-24 text-center sm:py-32">
           <span className="rounded-full border border-border bg-card/60 px-4 py-1.5 text-xs font-semibold tracking-[0.2em] text-primary uppercase">
-            Comunidade oficial
+            Comunidade de corretores e imobiliárias
           </span>
           <h1 className="mt-7 text-4xl leading-[1.05] font-black tracking-tight uppercase sm:text-6xl">
-            Residencial{" "}
-            <span className="text-flame">Paradiso Itaquera</span> na palma da
-            sua mão
+            Venda mais com o{" "}
+            <span className="text-flame">Paradiso Itaquera</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-foreground/85">
-            Acompanhe o projeto de perto: obra, plantas, condições de pagamento e
-            promoções relâmpago direto no seu WhatsApp.
+            Entre na comunidade exclusiva organizada pela Aprova Casa e receba
+            material de vendas, condições comissionadas e liberação de
+            unidades em primeira mão.
           </p>
           <p className="mt-4 max-w-xl text-sm text-muted-foreground">
-            Um canal só para quem quer morar ou investir em Itaquera — sem
-            grupos lotados, sem spam, só informação que importa.
+            Um canal direto para quem quer fechar mais negócios em Itaquera —
+            sem ruído, só o que move a venda.
           </p>
           <div className="mt-10 w-full">
             <CtaButton label="Entrar na comunidade" />
@@ -186,8 +190,8 @@ function Index() {
           As melhores unidades saem primeiro
         </h2>
         <p className="mt-4 text-muted-foreground">
-          Quem está na comunidade vê as condições especiais antes de qualquer
-          anúncio. Não fique sabendo depois que a unidade já foi vendida.
+          Quem está na comunidade vê as condições especiais e unidades liberadas
+          antes do anúncio público. Não perca vendas por chegar tarde.
         </p>
         <div className="mt-10 rounded-2xl border border-border bg-card/70 p-6 text-left">
           <div className="flex items-center justify-between text-sm font-bold">
@@ -244,12 +248,12 @@ function Index() {
       <section className="mx-auto max-w-4xl px-5 pb-20">
         <div className="bg-glow rounded-3xl border border-border bg-card/60 px-6 py-14 text-center">
           <h2 className="text-3xl font-black tracking-tight uppercase sm:text-4xl">
-            Seu próximo endereço pode estar a{" "}
+            Seu próximo fechamento pode estar a{" "}
             <span className="text-flame">um clique</span>
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
-            Entre agora e receba as próximas novidades do Residencial Paradiso
-            Itaquera em primeira mão.
+            Entre agora na comunidade do Residencial Paradiso Itaquera e
+            comece a vender com mais informação e respaldo.
           </p>
           <div className="mt-9 flex justify-center">
             <CtaButton label="Entrar no WhatsApp agora" />
@@ -259,8 +263,8 @@ function Index() {
 
       <footer className="border-t border-border py-8 text-center">
         <p className="text-sm text-muted-foreground">
-          © 2026 Residencial Paradiso Itaquera — Comunidade de moradores e
-          investidores
+          © 2026 Residencial Paradiso Itaquera — Comunidade organizada pela
+          Aprova Casa
         </p>
         <p className="mt-1 text-xs text-muted-foreground/70">
           Este canal não possui vínculo direto com a marca WhatsApp Inc. Imagens
