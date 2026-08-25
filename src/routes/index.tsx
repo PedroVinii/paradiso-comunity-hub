@@ -187,17 +187,16 @@ function Index() {
       {/* Scarcity */}
       <section className="mx-auto max-w-3xl px-5 py-16 text-center">
         <h2 className="text-2xl font-black tracking-tight uppercase sm:text-3xl">
-          As melhores unidades saem primeiro
+          A comunidade está quase cheia
         </h2>
         <p className="mt-4 text-muted-foreground">
-          Quem está na comunidade vê as condições especiais e unidades liberadas
-          antes do anúncio público. Não perca vendas por chegar tarde.
+          Vagas são limitadas para manter a qualidade das informações e o foco
+          nos parceiros que realmente vendem o projeto.
         </p>
         <div className="mt-10 rounded-2xl border border-border bg-card/70 p-6 text-left">
           <div className="flex items-center justify-between text-sm font-bold">
             <span className="flex items-center gap-2">
-              <Flame className="size-4 text-primary" /> Unidades reservadas na
-              fase atual
+              <Flame className="size-4 text-primary" /> Capacidade da comunidade
             </span>
             <span className="text-primary">72%</span>
           </div>
@@ -205,11 +204,11 @@ function Index() {
             <div className="bg-flame h-full w-[72%] rounded-full" />
           </div>
           <p className="mt-4 text-center text-xs text-muted-foreground">
-            Atualizado semanalmente pela equipe de vendas do empreendimento.
+            Atualizado conforme novos corretores e imobiliárias entram.
           </p>
         </div>
         <div className="mt-10">
-          <CtaButton label="Quero acompanhar o projeto" />
+          <CtaButton label="Garantir minha vaga" />
         </div>
       </section>
 
