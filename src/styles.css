@@ -150,3 +150,21 @@
     color: var(--color-foreground);
   }
 }
+
+@layer utilities {
+  .bg-flame {
+    background-image: var(--gradient-flame);
+  }
+  .text-flame {
+    background-image: var(--gradient-flame);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .glow-flame {
+    box-shadow: var(--shadow-flame);
+  }
+  .bg-glow {
+    background-image: var(--gradient-glow);
+  }
+}
