@@ -10,9 +10,15 @@ import {
   Lock,
   Flame,
   HelpCircle,
-  Briefcase,
-  TrendingUp,
   Handshake,
+  Home,
+  Gift,
+  Wallet,
+  ParkingCircle,
+  Train,
+  Car,
+  Hospital,
+  CheckCircle2,
 } from "lucide-react";
 import {
   Accordion,
@@ -21,6 +27,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import heroImg from "@/assets/paradiso-fachada.png.asset.json";
+import logoImg from "@/assets/paradiso-logo.png.asset.json";
 
 const TITLE =
   "Comunidade Paradiso Itaquera para Corretores e Imobiliárias | Aprova Casa";
@@ -62,6 +69,50 @@ function CtaButton({ label }: { label: string }) {
     </div>
   );
 }
+
+const projectHighlights = [
+  {
+    icon: Home,
+    title: "1, 2 ou 3 dormitórios com suíte",
+    text: "Unidades versáteis com opções de 1 ou 2 varandas, sala de jantar ampliada e vaga coberta.",
+  },
+  {
+    icon: Gift,
+    title: "Documentação grátis",
+    text: "Facilitamos toda a documentação do imóvel para você e seu cliente não se preocuparem com burocracia.",
+  },
+  {
+    icon: Wallet,
+    title: "Entrada facilitada",
+    text: "Condições especiais de pagamento que tornam o sonho da casa própria mais acessível.",
+  },
+  {
+    icon: ParkingCircle,
+    title: "Vagas cobertas",
+    text: "Mais segurança e praticidade no dia a dia dos moradores.",
+  },
+];
+
+const locationItems = [
+  {
+    icon: Train,
+    number: "01",
+    title: "Estação Dom Bosco",
+    text: "Apenas 3 minutos a pé. Conexão direta com metrô e mobilidade facilitada.",
+  },
+  {
+    icon: Car,
+    number: "02",
+    title: "Shopping Metrô Itaquera",
+    text: "6 minutos de carro. Compras, lazer e serviços perto de casa.",
+  },
+  {
+    icon: Hospital,
+    number: "03",
+    title: "Hospital Santa Marcelina",
+    text: "Proximidade e segurança para cuidar da saúde da família.",
+  },
+];
 
 const benefits = [
   {
@@ -111,7 +162,7 @@ const faq = [
   },
   {
     q: "Meus clientes ficam expostos no grupo?",
-    a: "Não. A comunidade reúne apenas corretores e imobiliárias. Seus clientes são condugidos em atendimento particular.",
+    a: "Não. A comunidade reúne apenas corretores e imobiliárias. Seus clientes são conduzidos em atendimento particular.",
   },
   {
     q: "Como acesso as tabelas e o material de divulgação?",
@@ -133,25 +184,122 @@ function Index() {
         />
         <div className="bg-glow absolute inset-0" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/85 to-background" />
-        <div className="relative mx-auto flex max-w-3xl flex-col items-center px-5 py-24 text-center sm:py-32">
+        <div className="relative mx-auto flex max-w-3xl flex-col items-center px-5 py-20 text-center sm:py-28">
+          <img
+            src={logoImg.url}
+            alt="Residencial Paradiso Itaquera"
+            width={320}
+            height={120}
+            className="mb-6 w-full max-w-[280px] drop-shadow-lg sm:max-w-[320px]"
+          />
           <span className="rounded-full border border-border bg-card/60 px-4 py-1.5 text-xs font-semibold tracking-[0.2em] text-primary uppercase">
             Comunidade de corretores e imobiliárias
           </span>
-          <h1 className="mt-7 text-4xl leading-[1.05] font-black tracking-tight uppercase sm:text-6xl">
+          <h1 className="mt-6 text-4xl leading-[1.05] font-black tracking-tight uppercase sm:text-6xl">
             Venda mais com o{" "}
             <span className="text-flame">Paradiso Itaquera</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-foreground/85">
-            Entre na comunidade exclusiva organizada pela Aprova Casa e receba
-            material de vendas, condições comissionadas e liberação de
-            unidades em primeira mão.
+            Apartamentos modernos de 1, 2 ou 3 dormitórios com lazer completo e
+            varanda gourmet.
           </p>
-          <p className="mt-4 max-w-xl text-sm text-muted-foreground">
-            Um canal direto para quem quer fechar mais negócios em Itaquera —
-            sem ruído, só o que move a venda.
+          <div className="mt-6 rounded-2xl border border-border bg-card/70 px-8 py-5 text-center">
+            <p className="text-xs font-bold tracking-[0.2em] text-muted-foreground uppercase">
+              A partir de
+            </p>
+            <p className="mt-1 text-4xl font-black text-flame sm:text-5xl">
+              R$ 290.000
+            </p>
+          </div>
+          <p className="mt-6 max-w-xl text-sm text-muted-foreground">
+            Entre na comunidade exclusiva organizada pela Aprova Casa e receba
+            material de vendas, condições comissionadas e liberação de unidades
+            em primeira mão.
           </p>
           <div className="mt-10 w-full">
             <CtaButton label="Entrar na comunidade" />
+          </div>
+        </div>
+      </section>
+
+      {/* Project highlights */}
+      <section className="mx-auto max-w-6xl px-5 py-20">
+        <div className="text-center">
+          <p className="text-xs font-bold tracking-[0.25em] text-primary uppercase">
+            O empreendimento
+          </p>
+          <h2 className="mt-3 text-3xl font-black tracking-tight uppercase sm:text-4xl">
+            Tudo que o cliente <span className="text-flame">procura</span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+            Unidades de 1, 2 ou 3 dormitórios com suíte e opções com 1 ou 2
+            varandas, sala de jantar ampliada e vaga coberta.
+          </p>
+        </div>
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {projectHighlights.map((item) => (
+            <article
+              key={item.title}
+              className="rounded-2xl border border-border bg-card/70 p-6 transition-colors hover:border-primary/50"
+            >
+              <span className="inline-flex size-12 items-center justify-center rounded-xl bg-secondary text-primary">
+                <item.icon className="size-6" />
+              </span>
+              <h3 className="mt-5 text-lg font-bold">{item.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {item.text}
+              </p>
+            </article>
+          ))}
+        </div>
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-2 text-sm font-semibold text-foreground">
+            <CheckCircle2 className="size-4 text-primary" /> Minha Casa
+            Minha Vida
+          </span>
+          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-2 text-sm font-semibold text-foreground">
+            <CheckCircle2 className="size-4 text-primary" /> Lazer completo
+          </span>
+          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-2 text-sm font-semibold text-foreground">
+            <CheckCircle2 className="size-4 text-primary" /> Varanda gourmet
+          </span>
+        </div>
+      </section>
+
+      {/* Location */}
+      <section className="relative overflow-hidden border-y border-border bg-card/40 py-20">
+        <div className="bg-glow absolute inset-0 opacity-50" />
+        <div className="relative mx-auto max-w-6xl px-5">
+          <div className="text-center">
+            <p className="text-xs font-bold tracking-[0.25em] text-primary uppercase">
+              Localização
+            </p>
+            <h2 className="mt-3 text-3xl font-black tracking-tight uppercase sm:text-4xl">
+              A menos de 3 minutos da{" "}
+              <span className="text-flame">Estação Dom Bosco</span>
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+              Praticidade é estar a poucos passos de tudo o que você precisa.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-5 sm:grid-cols-3">
+            {locationItems.map((item) => (
+              <article
+                key={item.title}
+                className="relative rounded-2xl border border-border bg-card/70 p-6 transition-colors hover:border-primary/50"
+              >
+                <span className="absolute top-6 right-6 text-3xl font-black text-primary/20">
+                  {item.number}
+                </span>
+                <span className="inline-flex size-12 items-center justify-center rounded-xl bg-secondary text-primary">
+                  <item.icon className="size-6" />
+                </span>
+                <h3 className="mt-5 text-lg font-bold">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {item.text}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -163,7 +311,7 @@ function Index() {
             O que você recebe
           </p>
           <h2 className="mt-3 text-3xl font-black tracking-tight uppercase sm:text-4xl">
-            Por dentro do <span className="text-flame">Paradiso</span>
+            Por dentro da <span className="text-flame">comunidade</span>
           </h2>
         </div>
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
