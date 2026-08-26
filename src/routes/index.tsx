@@ -208,7 +208,7 @@ function Index() {
               A partir de
             </p>
             <p className="mt-1 text-4xl font-black text-flame sm:text-5xl">
-              R$ 290.000
+              R$ 204.000
             </p>
           </div>
           <p className="mt-6 max-w-xl text-sm text-muted-foreground">
