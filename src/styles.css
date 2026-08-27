@@ -168,3 +168,8 @@
     background-image: var(--gradient-glow);
   }
 }
+
+#lovable-badge {
+  display: none !important;
+}
+
